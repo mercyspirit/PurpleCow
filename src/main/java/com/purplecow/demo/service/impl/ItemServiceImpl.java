@@ -1,8 +1,9 @@
-package com.purplecow.service.impl;
+package com.purplecow.demo.service.impl;
 
-import com.purplecow.model.Item;
-import com.purplecow.repository.ItemRepository;
-import com.purplecow.service.ItemService;
+import com.purplecow.demo.model.Item;
+import com.purplecow.demo.repository.ItemRepository;
+import com.purplecow.demo.service.ItemService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,18 +21,13 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
-    public Item findByItemId(String id) {
-        return itemRepository.findByItemId(id);
+    public Item findItemById(String id) {
+        return itemRepository.findItemById(id);
     }
 
     @Override
-    public List<Item> findByItemQuery(String query) {
-        return itemRepository.findByItemQuery(query);
-    }
-
-    @Override
-    public List<Item> findAllByOrderIdAscen() {
-        return itemRepository.findAllByOrderIdAscen();
+    public List<Item> findItemByName(String name) {
+        return itemRepository.findItemByName(name);
     }
 
     @Override
