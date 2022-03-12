@@ -8,7 +8,7 @@ import java.util.List;
 public interface ItemRepository extends MongoRepository<Item, String> {
     Item findByItemId(String id);
 
-    List<Item> findByItemQuery();
+    List<Item> findByItemQuery(String query);
 
-    List<Item> findAllOrderByItemId();
+    List<Item> findAllByOrderIdAscen();
 }
