@@ -1,4 +1,4 @@
-package com.purplecow.demo.model;
+package com.purplecow.application.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

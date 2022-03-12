@@ -1,7 +1,7 @@
-package com.purplecow.demo.controller;
+package com.purplecow.application.controller;
 
-import com.purplecow.demo.model.Item;
-import com.purplecow.demo.service.ItemService;
+import com.purplecow.application.model.Item;
+import com.purplecow.application.service.ItemService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,13 +14,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/items")
+@RequestMapping("/")
 public class ItemRestController {
 
     @Autowired
     private ItemService itemService;
 
-    @GetMapping(value = "/")
+    @GetMapping(value = "/items")
     public ResponseEntity<List<Item>> getAllItems() {
         try {
             List<Item> items = new ArrayList<Item>();

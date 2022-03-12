@@ -1,8 +1,8 @@
-package com.purplecow.demo.service.impl;
+package com.purplecow.application.service.impl;
 
-import com.purplecow.demo.model.Item;
-import com.purplecow.demo.repository.ItemRepository;
-import com.purplecow.demo.service.ItemService;
+import com.purplecow.application.model.Item;
+import com.purplecow.application.repository.ItemRepository;
+import com.purplecow.application.service.ItemService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,8 +1,8 @@
-package com.purplecow.demo.service;
+package com.purplecow.application.service;
 
 import java.util.List;
 
-import com.purplecow.demo.model.Item;
+import com.purplecow.application.model.Item;
 
 public interface ItemService {
     List<Item> findAll();
