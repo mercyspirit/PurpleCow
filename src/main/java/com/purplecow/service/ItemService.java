@@ -9,7 +9,7 @@ public interface ItemService {
 
     Item findByItemId(String id);
 
-    Item findByItemQuery(String query);
+    List<Item> findByItemQuery(String query);
 
     List<Item> findAllByOrderIdAscen();
 
