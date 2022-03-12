@@ -36,8 +36,18 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
+    public List<Item> saveOrUpdateItemList(List<Item> itemList) {
+        return itemRepository.saveAll(itemList);
+    }
+
+    @Override
     public void deleteItemById(String id) {
         itemRepository.deleteById(id);
+    }
+
+    @Override
+    public void deleteAllItems() {
+        itemRepository.deleteAll();
     }
 
 }

@@ -13,5 +13,9 @@ public interface ItemService {
 
     Item saveOrUpdateItem(Item item);
 
+    List<Item> saveOrUpdateItemList(List<Item> item);
+
     void deleteItemById(String id);
+
+    void deleteAllItems();
 }
