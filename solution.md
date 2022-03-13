@@ -119,3 +119,13 @@ db.items.insert({id: "1", name: "Purple Project"})
 2. No secrets implementation yet
 
 3. As solution gets bigger, the project may be required to be split into separate maven modules which will increase build time and development time to refactor
+
+4. More data that is inserted, the bigger the need is for pagination. If entries come to be in the 100's, we may need to refactor into a pagination model
+
+5. Name query would be faster if the fields were successfully text indexed
+
+6. As database gets bigger, search apis should be turned into streams
+
+7. User authentication needs to be implemented
+
+8. Splunk + Datadog should be configured from the start for easy debugging
