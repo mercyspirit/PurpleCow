@@ -15,9 +15,9 @@ public interface ItemService {
 
     List<Item> findItemByName(String name);
 
-    Item saveOrUpdateItem(Item item);
-
     List<Item> saveOrUpdateItemList(List<Item> item);
+
+    Item saveOrUpdateItem(Item item);
 
     void deleteItemById(String id);
 

@@ -11,6 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Item {
     @Id
     private String id;
+
     private String name;
 
     public Item(String id, String name) {
