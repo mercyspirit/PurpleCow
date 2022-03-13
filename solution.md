@@ -129,3 +129,5 @@ db.items.insert({id: "1", name: "Purple Project"})
 7. User authentication needs to be implemented
 
 8. Splunk + Datadog should be configured from the start for easy debugging
+
+9. Id should be tracked and auto incremented every time a new project is added. MongoDB has triggers.

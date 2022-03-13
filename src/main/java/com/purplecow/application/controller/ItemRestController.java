@@ -51,10 +51,6 @@ public class ItemRestController {
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<Item> getItemById(@PathVariable(name = "id") String id) {
-        if (id == null) {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        }
-
         try {
             Item item = itemService.findItemById(id);
             if (item == null) {
@@ -70,10 +66,7 @@ public class ItemRestController {
     public ResponseEntity<List<Item>> saveItemList(@RequestBody List<Item> itemList) {
         try {
             List<Item> items = itemService.saveOrUpdateItemList(itemList);
-            if (items.isEmpty()) {
-                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-            }
-            return new ResponseEntity<>(null, HttpStatus.OK);
+            return new ResponseEntity<>(items, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -83,10 +76,7 @@ public class ItemRestController {
     public ResponseEntity<Item> saveOrAddItem(@RequestBody Item item) {
         try {
             Item savedItem = itemService.saveOrUpdateItem(item);
-            if (savedItem == null) {
-                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-            }
-            return new ResponseEntity<>(null, HttpStatus.OK);
+            return new ResponseEntity<>(savedItem, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
