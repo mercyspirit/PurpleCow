@@ -4,6 +4,10 @@ import java.util.List;
 
 import com.purplecow.application.model.Item;
 
+/*
+ * Author: ziying.qiu@gmail.com
+ */
+
 public interface ItemService {
     List<Item> findAll();
 
