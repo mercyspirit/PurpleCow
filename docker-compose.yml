@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  api_service:
+    build: .
+    restart: always
+    ports:
+      - ${APP_PORT}:3000
+    depends_on:
+      - mongo_db
+    links:
+      - mongo_db:purplecowdb
+  mongo_db:
+    image: "mongo:4.4.3"
+    restart: always
+    ports:
+      - ${DB_PORT}:27017
