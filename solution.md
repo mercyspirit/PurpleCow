@@ -9,6 +9,6 @@ Command for running api
 
 docker run -dp 3000:3000 purplecowapi
 
-docker-compose up
+docker-compose build
 
 docker-compose --env-file .env up
