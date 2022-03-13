@@ -5,7 +5,6 @@ import com.purplecow.application.repository.ItemRepository;
 import com.purplecow.application.service.ItemService;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,9 +18,6 @@ public class ItemServiceImpl implements ItemService {
 
     @Autowired
     private ItemRepository itemRepository;
-
-    @Autowired
-    MongoTemplate template;
 
     @Override
     public List<Item> findAll() {
