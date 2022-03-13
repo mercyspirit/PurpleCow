@@ -125,3 +125,7 @@ db.items.insert({id: "1", name: "Purple Project"})
 5. Name query would be faster if the fields were successfully text indexed
 
 6. As database gets bigger, search apis should be turned into streams
+
+7. User authentication needs to be implemented
+
+8. Splunk + Datadog should be configured from the start for easy debugging
