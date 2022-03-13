@@ -3,6 +3,10 @@ package com.purplecow.application.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+/*
+ * Author: ziying.qiu@gmail.com
+ */
+
 @Document(collection = "items")
 public class Item {
     @Id

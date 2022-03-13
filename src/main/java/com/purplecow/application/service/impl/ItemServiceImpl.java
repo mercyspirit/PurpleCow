@@ -9,6 +9,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/*
+ * Author: ziying.qiu@gmail.com
+ */
+
 @Service
 public class ItemServiceImpl implements ItemService {
 
