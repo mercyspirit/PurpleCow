@@ -31,7 +31,7 @@ public class ItemRestController {
     private ItemService itemService;
 
     @GetMapping()
-    public ResponseEntity<List<Item>> getAllItems(@RequestParam(required = false) String query) {
+    public ResponseEntity<?> getAllItems(@RequestParam(required = false) String query) {
         try {
             List<Item> items = new ArrayList<Item>();
             if (query == null) {
@@ -45,12 +45,12 @@ public class ItemRestController {
             }
             return new ResponseEntity<>(items, HttpStatus.OK);
         } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(e, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
     @GetMapping(value = "/{id}")
-    public ResponseEntity<Item> getItemById(@PathVariable(name = "id") String id) {
+    public ResponseEntity<?> getItemById(@PathVariable(name = "id") String id) {
         try {
             Item item = itemService.findItemById(id);
             if (item == null) {
@@ -58,27 +58,27 @@ public class ItemRestController {
             }
             return new ResponseEntity<>(item, HttpStatus.OK);
         } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(e, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
     @PostMapping()
-    public ResponseEntity<List<Item>> saveItemList(@RequestBody List<Item> itemList) {
+    public ResponseEntity<?> saveItemList(@RequestBody List<Item> itemList) {
         try {
             List<Item> items = itemService.saveOrUpdateItemList(itemList);
             return new ResponseEntity<>(items, HttpStatus.OK);
         } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(e, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
     @PutMapping()
-    public ResponseEntity<Item> saveOrAddItem(@RequestBody Item item) {
+    public ResponseEntity<?> saveOrAddItem(@RequestBody Item item) {
         try {
             Item savedItem = itemService.saveOrUpdateItem(item);
             return new ResponseEntity<>(savedItem, HttpStatus.OK);
         } catch (Exception e) {
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(e, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
