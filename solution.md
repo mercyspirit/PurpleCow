@@ -131,3 +131,49 @@ db.items.insert({id: "1", name: "Purple Project"})
 8. Splunk + Datadog should be configured from the start for easy debugging
 
 9. Id should be tracked and auto incremented every time a new project is added. MongoDB has triggers.
+
+## API List
+
+### _You can load PurpleCowAPI.postman_collection.json into postman for easy access to apis calls_
+
+Get All Items
+
+```
+GET /items
+```
+
+Get All Items Where Names Have the query as substring
+
+```
+GET /items?query=cow
+```
+
+Post list of items to either update or add new items
+
+```
+POST /items
+```
+
+Delete all items in collection
+
+```
+DELETE /items
+```
+
+Get item by id
+
+```
+GET /items/1
+```
+
+Put item to save or add new item
+
+```
+PUT /items
+```
+
+Delete item by id
+
+```
+DELETE /items/1
+```
